@@ -2,6 +2,7 @@ package RPOS7kit;
 
 import AutoPatch.CloudPatchHelper;
 import Utils.Log;
+import org.testng.annotations.Test;
 import test.AppDetails;
 import test.Functions;
 import test.KeyStrokes;
@@ -19,6 +20,7 @@ public class PreCheckValidations {
     private static CloudPatchHelper cloudPatchHelper=new CloudPatchHelper();
     private static String checkstatus;
 
+    @Test
     public static void exeValidation(String exe){
         if (!exe.contains(".exe")){
             functions.showWarning("Invalid exe : "+exe);
