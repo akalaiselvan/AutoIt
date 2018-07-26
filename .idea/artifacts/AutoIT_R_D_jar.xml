@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="AutoIT_R&amp;D:jar">
+    <output-path>$USER_HOME$/Desktop/Rpos7/ConnectPlus</output-path>
+    <root id="archive" name="AutoIT_R&amp;D_jar.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/JAR/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="AutoIT_R&amp;D" />
+      <element id="extracted-dir" path="E:/AutoIT Tools/jacob-1.18/jacob-1.18/jacob.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/plugins/testng/lib/jcommander.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/AutoIT Tools/AutoItX4Java.jar" path-in-jar="/" />
+      <element id="library" level="project" name="AutoItX4Java" />
+      <element id="library" level="project" name="lib" />
+      <element id="library" level="project" name="platform-3.5.1" />
+      <element id="library" level="project" name="jna-3.5.1" />
+      <element id="library" level="application" name="IdeaProjects" />
+      <element id="library" level="project" name="IdeaProjects" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/jacob-1.18-x64.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/jacob-1.18-x86.dll" />
+      <element id="library" level="project" name="json-jena-1.0" />
+      <element id="library" level="application" name="selenium-server-standalone-3.6.0" />
+    </root>
+  </artifact>
+</component>

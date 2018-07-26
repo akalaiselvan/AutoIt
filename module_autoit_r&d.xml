@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_autoit_r&amp;d" default="compile.module.autoit_r&amp;d">
+  <dirname property="module.autoit_r&amp;d.basedir" file="${ant.file.module_autoit_r&amp;d}"/>
+  
+  <property name="module.jdk.home.autoit_r&amp;d" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.autoit_r&amp;d" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.autoit_r&amp;d" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.autoit_r&amp;d" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="autoit_r&amp;d.output.dir" value="${module.autoit_r&amp;d.basedir}/out/production/AutoIT_R&amp;D"/>
+  <property name="autoit_r&amp;d.testoutput.dir" value="${module.autoit_r&amp;d.basedir}/out/test/AutoIT_R&amp;D"/>
+  
+  <path id="autoit_r&amp;d.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="autoit_r&amp;d.module.production.classpath">
+    <path refid="${module.jdk.classpath.autoit_r&amp;d}"/>
+    <pathelement location="E:/AutoIT Tools/AutoItX4Java.jar"/>
+    <pathelement location="E:/AutoIT Tools/jacob-1.18/jacob-1.18/jacob.jar"/>
+    <path refid="library.autoitx4java.classpath"/>
+    <path refid="library.jacob-1.classpath"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/jcommander.jar"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/testng.jar"/>
+    <path refid="library.lib.classpath"/>
+    <pathelement location="${basedir}/lib/log4j-1.2.9.jar"/>
+    <pathelement location="${basedir}/lib/log4j-bridge-0.9.7.jar"/>
+    <pathelement location="${basedir}/lib/nlog4j-1.2.25.jar"/>
+    <path refid="library.ideaprojects.classpath"/>
+    <path refid="library.platform-3.5.1.classpath"/>
+    <path refid="library.jna-3.5.1.classpath"/>
+    <path refid="library.json-jena-1.0.classpath"/>
+    <path refid="library.java-json-schema.classpath"/>
+    <path refid="library.java-json1.classpath"/>
+    <path refid="library.java-json-schema1.classpath"/>
+    <path refid="library.java-json.classpath"/>
+    <pathelement location="${idea.home}/redist/annotations-java8.jar"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.selenium-server-standalone-3.6.0.classpath"/>
+  </path>
+  
+  <path id="autoit_r&amp;d.runtime.production.module.classpath">
+    <pathelement location="${autoit_r&amp;d.output.dir}"/>
+    <pathelement location="E:/AutoIT Tools/AutoItX4Java.jar"/>
+    <pathelement location="E:/AutoIT Tools/jacob-1.18/jacob-1.18/jacob.jar"/>
+    <path refid="library.autoitx4java.classpath"/>
+    <path refid="library.jacob-1.classpath"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/jcommander.jar"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/testng.jar"/>
+    <path refid="library.lib.classpath"/>
+    <pathelement location="${basedir}/lib/log4j-1.2.9.jar"/>
+    <pathelement location="${basedir}/lib/log4j-bridge-0.9.7.jar"/>
+    <pathelement location="${basedir}/lib/nlog4j-1.2.25.jar"/>
+    <path refid="library.ideaprojects.classpath"/>
+    <path refid="library.platform-3.5.1.classpath"/>
+    <path refid="library.jna-3.5.1.classpath"/>
+    <path refid="library.json-jena-1.0.classpath"/>
+    <path refid="library.java-json-schema.classpath"/>
+    <path refid="library.java-json1.classpath"/>
+    <path refid="library.java-json-schema1.classpath"/>
+    <path refid="library.java-json.classpath"/>
+    <pathelement location="${idea.home}/redist/annotations-java8.jar"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.selenium-server-standalone-3.6.0.classpath"/>
+  </path>
+  
+  <path id="autoit_r&amp;d.module.classpath">
+    <path refid="${module.jdk.classpath.autoit_r&amp;d}"/>
+    <pathelement location="${autoit_r&amp;d.output.dir}"/>
+    <pathelement location="E:/AutoIT Tools/AutoItX4Java.jar"/>
+    <pathelement location="E:/AutoIT Tools/jacob-1.18/jacob-1.18/jacob.jar"/>
+    <path refid="library.autoitx4java.classpath"/>
+    <path refid="library.jacob-1.classpath"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/jcommander.jar"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/testng.jar"/>
+    <path refid="library.lib.classpath"/>
+    <pathelement location="${basedir}/lib/log4j-1.2.9.jar"/>
+    <pathelement location="${basedir}/lib/log4j-bridge-0.9.7.jar"/>
+    <pathelement location="${basedir}/lib/nlog4j-1.2.25.jar"/>
+    <path refid="library.ideaprojects.classpath"/>
+    <path refid="library.platform-3.5.1.classpath"/>
+    <path refid="library.jna-3.5.1.classpath"/>
+    <path refid="library.json-jena-1.0.classpath"/>
+    <path refid="library.java-json-schema.classpath"/>
+    <path refid="library.java-json1.classpath"/>
+    <path refid="library.java-json-schema1.classpath"/>
+    <path refid="library.java-json.classpath"/>
+    <pathelement location="${idea.home}/redist/annotations-java8.jar"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.selenium-server-standalone-3.6.0.classpath"/>
+  </path>
+  
+  <path id="autoit_r&amp;d.runtime.module.classpath">
+    <pathelement location="${autoit_r&amp;d.testoutput.dir}"/>
+    <pathelement location="${autoit_r&amp;d.output.dir}"/>
+    <pathelement location="E:/AutoIT Tools/AutoItX4Java.jar"/>
+    <pathelement location="E:/AutoIT Tools/jacob-1.18/jacob-1.18/jacob.jar"/>
+    <path refid="library.autoitx4java.classpath"/>
+    <path refid="library.jacob-1.classpath"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/jcommander.jar"/>
+    <pathelement location="${idea.home}/plugins/testng/lib/testng.jar"/>
+    <path refid="library.lib.classpath"/>
+    <pathelement location="${basedir}/lib/log4j-1.2.9.jar"/>
+    <pathelement location="${basedir}/lib/log4j-bridge-0.9.7.jar"/>
+    <pathelement location="${basedir}/lib/nlog4j-1.2.25.jar"/>
+    <path refid="library.ideaprojects.classpath"/>
+    <path refid="library.platform-3.5.1.classpath"/>
+    <path refid="library.jna-3.5.1.classpath"/>
+    <path refid="library.json-jena-1.0.classpath"/>
+    <path refid="library.java-json-schema.classpath"/>
+    <path refid="library.java-json1.classpath"/>
+    <path refid="library.java-json-schema1.classpath"/>
+    <path refid="library.java-json.classpath"/>
+    <pathelement location="${idea.home}/redist/annotations-java8.jar"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.selenium-server-standalone-3.6.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.autoit_r&amp;d">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.autoit_r&amp;d">
+    <patternset refid="excluded.from.module.autoit_r&amp;d"/>
+  </patternset>
+  
+  <path id="autoit_r&amp;d.module.sourcepath">
+    <dirset dir="${module.autoit_r&amp;d.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.autoit_r&amp;d" depends="compile.module.autoit_r&amp;d.production,compile.module.autoit_r&amp;d.tests" description="Compile module AutoIT_R&amp;D"/>
+  
+  <target name="compile.module.autoit_r&amp;d.production" depends="register.custom.compilers" description="Compile module AutoIT_R&amp;D; production classes">
+    <mkdir dir="${autoit_r&amp;d.output.dir}"/>
+    <javac2 destdir="${autoit_r&amp;d.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.autoit_r&amp;d}/javac">
+      <compilerarg line="${compiler.args.autoit_r&amp;d}"/>
+      <bootclasspath refid="autoit_r&amp;d.module.bootclasspath"/>
+      <classpath refid="autoit_r&amp;d.module.production.classpath"/>
+      <src refid="autoit_r&amp;d.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.autoit_r&amp;d"/>
+    </javac2>
+    
+    <copy todir="${autoit_r&amp;d.output.dir}">
+      <fileset dir="${module.autoit_r&amp;d.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.autoit_r&amp;d.tests" depends="register.custom.compilers,compile.module.autoit_r&amp;d.production" description="compile module AutoIT_R&amp;D; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.autoit_r&amp;d" description="cleanup module">
+    <delete dir="${autoit_r&amp;d.output.dir}"/>
+    <delete dir="${autoit_r&amp;d.testoutput.dir}"/>
+  </target>
+</project>
